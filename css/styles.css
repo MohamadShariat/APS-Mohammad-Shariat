@@ -63,6 +63,7 @@ a {
   box-shadow: 0px 0px 40px 6px rgba(0, 0, 0, 0.5) inset;
   -webkit-box-shadow: 0px 0px 40px 6px rgba(0, 0, 0, 0.5) inset;
   -moz-box-shadow: 0px 0px 40px 6px rgba(0, 0, 0, 0.5) inset;
+  z-index: 2;
 }
 
 .header .navbar ul {
@@ -189,6 +190,11 @@ a {
   background-color: var(--quaternary-color);
 }
 
+.form input:focus,
+.form textarea:focus {
+  background-color: #fff;
+}
+
 .form input::placeholder {
   padding-left: 1rem;
 }
@@ -212,4 +218,55 @@ a {
 
 .form input[type='submit']:hover {
   background-color: var(--quaternary-color);
+}
+
+.form input[type='submit']:active {
+  scale: 0.98;
+}
+
+/* Sign up page*/
+.form-login {
+  margin: 10rem 0;
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+  .header {
+    padding: 0 3rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    letter-spacing: 0;
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
+
+  .footer .table thead tr th,
+  .footer .table tbody tr td {
+    padding: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    padding: 0 2rem;
+  }
+
+  .form {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
 }
