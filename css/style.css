@@ -1,7 +1,68 @@
+@font-face {
+  font-family: 'IRANSans';
+  src: url(../assets/fonts/Iranian\ Sans.ttf);
+}
+
+* {
+  font-family: 'IRANSans';
+  direction: rtl;
+}
+
 .navbar-nav .nav-item {
   cursor: pointer;
 }
 
 .navbar-nav .nav-item:hover {
   opacity: 0.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid + section {
+  text-align: right;
+}
+
+.grid + section > h3 {
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgb(214, 184, 10);
+}
+
+.card {
+  box-shadow: 0 0 5px 2px rgb(167, 167, 167);
+  border-radius: 8px;
+  width: 330px;
+  margin: 0 auto;
+}
+
+.card i,
+.checked {
+  color: rgb(214, 184, 10);
+}
+
+.card img {
+  border-radius: 10px;
+}
+
+.order:hover,
+.like:hover {
+  transition: all 1s;
+}
+
+.order:hover::before {
+  content: 'سفارش';
+  color: rgb(214, 184, 10);
+  margin-left: 10px;
+}
+
+.like:hover::before {
+  content: 'علاقه';
+  color: rgb(214, 184, 10);
+  margin-left: 10px;
 }
