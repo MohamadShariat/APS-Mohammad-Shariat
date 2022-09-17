@@ -3,6 +3,10 @@
   src: url(../assets/fonts/Iranian\ Sans.ttf);
 }
 
+:root {
+  --gold-color: rgb(214, 184, 10);
+}
+
 * {
   font-family: 'IRANSans';
   direction: rtl;
@@ -31,7 +35,7 @@
 .grid + section > h3 {
   display: inline-block;
   padding-bottom: 10px;
-  border-bottom: 2px solid rgb(214, 184, 10);
+  border-bottom: 2px solid var(--gold-color);
 }
 
 .card {
@@ -43,26 +47,28 @@
 
 .card i,
 .checked {
-  color: rgb(214, 184, 10);
+  color: var(--gold-color);
 }
 
 .card img {
   border-radius: 10px;
 }
 
-.order:hover,
-.like:hover {
-  transition: all 1s;
-}
-
 .order:hover::before {
   content: 'سفارش';
-  color: rgb(214, 184, 10);
+  color: var(--gold-color);
   margin-left: 10px;
 }
 
 .like:hover::before {
   content: 'علاقه';
-  color: rgb(214, 184, 10);
+  color: var(--gold-color);
   margin-left: 10px;
+}
+
+footer {
+  width: 100%;
+  padding: 32px;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
